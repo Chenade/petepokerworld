@@ -169,10 +169,6 @@ Route::prefix('news')->group(function () {
     });
 
     Route::get('/{id}',function ($id){
-        $input = request() -> all();
-        $token = ADMIN::checkToken($input);
-        if(!$token)
-            return $response = response() -> json(['success' => False, 'message' => 'Invalid Token'], 403);
         $content = NEWS::getElementById($id);
         if (!$content)
             return response() -> json(['success' => False, 'message' => 'News not found.'], 404);
@@ -235,10 +231,6 @@ Route::prefix('ads')->group(function () {
     });
 
     Route::get('/{id}',function ($id){
-        $input = request() -> all();
-        $token = ADMIN::checkToken($input);
-        if(!$token)
-            return $response = response() -> json(['success' => False, 'message' => 'Invalid Token'], 403);
         $content = ADS::getElementById($id);
         if (!$content)
             return response() -> json(['success' => False, 'message' => 'Ads not found.'], 404);
@@ -301,10 +293,6 @@ Route::prefix('banner')->group(function () {
     });
 
     Route::get('/{id}',function ($id){
-        $input = request() -> all();
-        $token = ADMIN::checkToken($input);
-        if(!$token)
-            return $response = response() -> json(['success' => False, 'message' => 'Invalid Token'], 403);
         $content = BANNER::getElementById($id);
         if (!$content)
             return response() -> json(['success' => False, 'message' => 'Banner not found.'], 404);
@@ -365,10 +353,6 @@ Route::prefix('n8')->group(function () {
     });
 
     Route::get('/{id}',function ($id){
-        $input = request() -> all();
-        $token = ADMIN::checkToken($input);
-        if(!$token)
-            return $response = response() -> json(['success' => False, 'message' => 'Invalid Token'], 403);
         $content = N8::getElementById($id);
         if (!$content)
             return response() -> json(['success' => False, 'message' => 'Ads not found.'], 404);
@@ -429,10 +413,6 @@ Route::prefix('faq')->group(function () {
     });
 
     Route::get('/{id}',function ($id){
-        $input = request() -> all();
-        $token = ADMIN::checkToken($input);
-        if(!$token)
-            return $response = response() -> json(['success' => False, 'message' => 'Invalid Token'], 403);
         $content = FAQ::getElementById($id);
         if (!$content)
             return response() -> json(['success' => False, 'message' => 'Ads not found.'], 404);
@@ -493,10 +473,6 @@ Route::prefix('course')->group(function () {
     });
 
     Route::get('/{id}',function ($id){
-        $input = request() -> all();
-        $token = ADMIN::checkToken($input);
-        if(!$token)
-            return $response = response() -> json(['success' => False, 'message' => 'Invalid Token'], 403);
         $content = COURSE::getElementById($id);
         if (!$content)
             return response() -> json(['success' => False, 'message' => 'Ads not found.'], 404);
