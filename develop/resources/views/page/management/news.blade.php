@@ -85,12 +85,16 @@
                                 <input type="number" class="form-control" id="edit_ord" min="1" max="99" value="1">
                             </div>
                         </div>
-                        <div class="col-6">
-                            <!-- <div class="form-group">
-                                <label class="col-form-label">{{trans('dictionary.del')}}:</label>
-                                <input type="text" class="form-control" id="ediit_tel"  >
-                            </div> -->
+                        <div class="col-6 image-box">
+                            <div class="form-group">
+                                <label class="col-form-label">{{trans('dictionary.uploadImage')}}:</label>
+                                <input type="file" id="file" name='file'>
+                                <input type="hidden" id="filecount" value='0'>
+                            </div>
                         </div>
+                    </div>
+                    <div class="image-box">
+                        <div class="d-flex flex-wrap" id="display-img"></div>
                     </div>
                 </div>
                 <div class="modal-footer">

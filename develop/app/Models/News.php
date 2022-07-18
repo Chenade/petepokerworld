@@ -28,7 +28,6 @@ class News extends Model
         $content->start_at = $request['start_at'];
         $content->end_at = $request['end_at'];
         $content->ts = (array_key_exists('ts', $request)) ? $request['ts'] : time();
-        if (array_key_exists('image', $request)) $content->link = $request['image'];
         if (array_key_exists('link', $request)) $content->link = $request['link'];
         if (array_key_exists('link_alt', $request)) $content->link_alt = $request['link_alt'];
         if (array_key_exists('ord', $request)) $content->ord = $request['ord'];

@@ -7,7 +7,7 @@
 <body>
 <div class="container" style="margin-top: 15%">
     <div class="col-auto" style="margin-bottom: 50px;margin-top: 50px;">
-        <img class="center-block" style="max-width: 100%;" src="img/bovia.png"/>
+        <img class="center-block" style="height: 100px;" src="/img/logo.png"/>
     </div>
     <div class="col-auto">
         <div class="input-group mb-2">

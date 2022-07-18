@@ -4,7 +4,7 @@
 <head>
     @include('includes.head')
     <title>Pete's Poker World</title>
-    <link rel="icon" href="/img/logo_icon.ico">
+    <link rel="icon" href="/img/logo.ico">
 </head>
 <body>
 @include('includes.manage.navbar')
