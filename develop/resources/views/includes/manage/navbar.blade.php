@@ -17,8 +17,8 @@
                     <li class="nav-item" style="margin: 0 0.5em;font-size:0.9em;"><a class="nav-link" href="/admin/banner" data-admin="banner">{{trans('dictionary.banner')}}{{trans('dictionary.management')}}</a></li>
                     <li class="nav-item" style="margin: 0 0.5em;font-size:0.9em;"><a class="nav-link" href="/admin/peter" data-admin="peter">{{trans('dictionary.about_p')}}</a></li>
                     <li class="nav-item" style="margin: 0 0.5em;font-size:0.9em;"><a class="nav-link" href="/admin/news" data-admin="news">{{trans('dictionary.news')}}</a></li>
-                    <li class="nav-item" style="margin: 0 0.5em;font-size:0.9em;"><a class="nav-link" href="/admin/natural_8" data-admin="natural_8">Natural 8</a></li>
-                    <li class="nav-item" style="margin: 0 0.5em;font-size:0.9em;"><a class="nav-link" href="/admin/faq" data-admin="faq">{{trans('dictionary.fnq')}}</a></li>
+                    <li class="nav-item" style="margin: 0 0.5em;font-size:0.9em;"><a class="nav-link" href="/admin/natural_8" data-admin="natural_8">{{trans('dictionary.n8_discount')}}</a></li>
+                    <!-- <li class="nav-item" style="margin: 0 0.5em;font-size:0.9em;"><a class="nav-link" href="/admin/faq" data-admin="faq">{{trans('dictionary.fnq')}}</a></li> -->
                     <li class="nav-item" style="margin: 0 0.5em;font-size:0.9em;"><a class="nav-link" href="/admin/course" data-admin="course">{{trans('dictionary.course_intro')}}</a></li>
                     <!-- <li class="nav-item" style="margin: 0 1.5em;font-size:0.9em;"><a class="nav-link" href="#service">{{trans('dictionary.Service')}}</a></li>
                     <li class="nav-item" style="margin: 0 1.5em;font-size:0.9em;"><a class="nav-link" href="#article">{{trans('dictionary.Article')}}</a></li>

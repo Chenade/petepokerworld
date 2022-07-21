@@ -2,78 +2,29 @@
 @extends('layouts.manage', ['page_header' =>'課程介紹'])
 @section('content')
 
-    <section id="manage_course">
-            
-        <table id="courseTable" class="display" style="width:100%">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Title</th>
-                    <th>Order</th>
-                    <th>Operation</th>
-                </tr>
-            </thead>
-            <tfoot>
-                <tr>
-                    <th>#</th>
-                    <th>Title</th>
-                    <th>Order</th>
-                    <th>Operation</th>
-                </tr>
-            </tfoot>
-        </table>
-
-        </div>
-    </section>
-
-    <div class="modal fade" id="course_modal" role="dialog">
-        <div class="modal-dialog modal-lg modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title"><span id="md-method">新增</span>課程介紹</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <div class="col-12">
-                        <div class="form-group">
-                            <label class="col-form-label">{{trans('dictionary.title')}}:</label>
-                            <input type="text" class="form-control" id="edit_title">
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="form-group">
-                            <label class="col-form-label">{{trans('dictionary.content')}}:</label>
-                            <textarea id="edit_content" name="edit_content" rows="5" cols="33"></textarea>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-wrap">
-                        <div class="col-6">
-                            <div class="form-group">
-                                <label class="col-form-label">{{trans('dictionary.ord')}}:</label>
-                                <input type="number" class="form-control" id="edit_ord" min="1" max="99" value="1">
-                            </div>
-                        </div>
-                        <div class="col-6 image-box">
-                            <div class="form-group">
-                                <label class="col-form-label">{{trans('dictionary.uploadImage')}}:</label>
-                                <input type="file" id="file" name='file'>
-                                <input type="hidden" id="filecount" value='0'>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="image-box">
-                        <div class="d-flex flex-wrap" id="display-img"></div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-success save-btn" data-action="add" data-loading-text="<span class='spinner-grow spinner-grow-sm'></span>" data-dismiss="modal">{{trans('dictionary.save')}}</button>
-                    <button type="button" class="btn btn-danger delete-btn" data-action="delete" data-loading-text="<span class='spinner-grow spinner-grow-sm'></span>">{{trans('dictionary.delete')}}</button>
+    <section id="manage_member">
+        <div class="container">
+            <div class="col-12">
+                <div class="form-group">
+                    <label class="col-form-label">{{trans('dictionary.content')}}:</label>
+                    <textarea id="edit_content" name="edit_content" rows="20" cols="33"></textarea>
                 </div>
             </div>
+            <div class="d-flex justify-content-center">
+                <button type="button" class="btn btn-success save-btn col-10" data-action="add" data-loading-text="<span class='spinner-grow spinner-grow-sm'></span>" data-dismiss="modal">{{trans('dictionary.save')}}</button>
+            </div>
+            <div class="col-12">
+                <div class="form-group">
+                    <label class="col-form-label">{{trans('dictionary.uploadImage')}}:</label>
+                    <input type="file" id="file" name='file'>
+                    <input type="hidden" id="filecount" value='0'>
+                </div>
+            </div>
+            <div class="image-box">
+                <div class="d-flex flex-wrap" id="display-img"></div>
+            </div>
         </div>
-    </div>
-
-
+    </section>
 
 @stop
 @section('end_script')

@@ -1,14 +1,13 @@
 {{--@include('includes.language')--}}
-@extends('layouts.manage', ['page_header' =>'Natural 8'])
+@extends('layouts.manage', ['page_header' =>'N8戰隊優惠'])
 @section('content')
 
-    <section id="manage_n8">
+    <section id="manage_member">
             
         <table id="n8Table" class="display" style="width:100%">
             <thead>
                 <tr>
                     <th>#</th>
-                    <th>Category</th>
                     <th>Title</th>
                     <th>Order</th>
                     <th>Operation</th>
@@ -17,7 +16,6 @@
             <tfoot>
                 <tr>
                     <th>#</th>
-                    <th>Category</th>
                     <th>Title</th>
                     <th>Order</th>
                     <th>Operation</th>
@@ -32,18 +30,10 @@
         <div class="modal-dialog modal-lg modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title"><span id="md-method">新增</span>Natural 8</h4>
+                    <h4 class="modal-title"><span id="md-method">新增</span>N8戰隊優惠</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <div class="col-12">
-                        <div class="form-group">
-                            <label class="col-form-label">{{trans('dictionary.category')}}:</label>
-                            <select class="col-12 selectpicker nopadding" id="edit_category">
-                                <option value="1">Test</option>
-                            </select>
-                        </div>
-                    </div>
                     <div class="col-12">
                         <div class="form-group">
                             <label class="col-form-label">{{trans('dictionary.title')}}:</label>
@@ -52,8 +42,22 @@
                     </div>
                     <div class="col-12">
                         <div class="form-group">
-                            <label class="col-form-label">{{trans('dictionary.link')}}:</label>
-                            <input type="text" class="form-control" id="edit_link">
+                            <label class="col-form-label">{{trans('dictionary.content')}}:</label>
+                            <textarea id="edit_content" name="edit_content" rows="5" cols="33"></textarea>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-wrap">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label class="col-form-label">{{trans('dictionary.link')}}:</label>
+                                <input type="text" class="form-control" id="edit_link">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label class="col-form-label">{{trans('dictionary.link_alt')}}:</label>
+                                <input type="text" class="form-control" id="edit_link_alt"  >
+                            </div>
                         </div>
                     </div>
                     <div class="d-flex flex-wrap">

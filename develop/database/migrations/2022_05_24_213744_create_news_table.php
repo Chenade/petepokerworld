@@ -15,11 +15,12 @@ class CreateNewsTable extends Migration
     {
         Schema::create('news', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('category')->default(1);
             $table->string('title');
             $table->json('content');
             $table->string('image')->default('');
-            $table->string('link')->default('');
-            $table->string('link_alt')->default('');
+            $table->string('link')->nullable()->default('');
+            $table->string('link_alt')->nullable()->default('');
             $table->integer('ts')->useCurrent();
             $table->integer('start_at')->useCurrent();
             $table->integer('end_at')->useCurrent();

@@ -1,5 +1,5 @@
 {{--@include('includes.language')--}}
-@extends('layouts.manage', ['page_header' =>'最新消息'])
+@extends('layouts.manage', ['page_header' =>'關於小P'])
 @section('content')
 
     <section id="manage_member">

@@ -73,4 +73,26 @@ class Course extends Model
         $content->save();
         return true;
     }
+
+    public static function get()
+    {
+        return DB::table('course') -> first();
+    }
+
+    public static function updateContent($input)
+    {
+        $content = COURSE::find(1);
+        if (!$content)
+        {
+            $content = new COURSE;
+            $content->content = $input['content'];
+            $content->save();
+        }
+        else{
+            $content->timestamps = true;
+            if (array_key_exists('content', $input)) $content->content = ($input['content']);
+            $content->save();
+        }
+        return true;
+    }
 }

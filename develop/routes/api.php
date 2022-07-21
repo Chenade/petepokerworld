@@ -57,7 +57,7 @@ function get_content($type, $id){
     else if ($type == "n8")
         $content = N8::getElementById($id);
     else if ($type == "course")
-        $content = COURSE::getElementById($id);
+        $content = COURSE::get();
     else if ($type == "peter")
         $content = PETER::get();
     return $content;
@@ -118,7 +118,6 @@ Route::prefix('image')->group(function () {
         $filename = PostImage::store($request, $category, $id);
         if (!$filename)
             return response() -> json(['success' => False, 'message' => 'Image upload failed'], 400);
-        $content = NEWS::updateById($id, ['image' => $filename]);
         return response() -> json(['success' => True, 'message' => '', 'token' => $token], 200);
     });
 
@@ -208,6 +207,28 @@ Route::prefix('news')->group(function () {
             return response() -> json(['success' => False, 'message' => 'News not found.'], 200);
         return response() -> json(['success' => True, 'message' => '', 'token' => $token], 200);
     });
+
+    Route::post('/{id}/uploadThumbnail', function(Request $request, $id){
+        $token = ADMIN::validToken(request() -> token);
+        if(!$token)
+            return $response = response() -> json(['success' => False, 'message' => 'Invalid Token'], 403);
+        
+        $content = NEWS::uploadThumbnail($request, $id);
+        // $filename = PostImage::store($request, $category, $id);
+        // if (!$filename)
+            // return response() -> json(['success' => False, 'message' => 'Image upload failed'], 400);
+        return response() -> json(['success' => True, 'message' => '', 'token' => $token], 200);
+    });
+
+    // Route::post('/{id}/uploadThumbnail',function (Request $request, $id){
+    //     $token = ADMIN::validToken(request() -> token);
+    //     if(!$token)
+    //         return $response = response() -> json(['success' => False, 'message' => 'Invalid Token'], 403);
+    //     $content = NEWS::uploadThumbnail($request, $id);
+    //     if (!$content)
+    //         return response() -> json(['success' => False, 'message' => 'Thumbnail Upload failed.'], 400);
+    //     return response() -> json(['success' => True, 'message' => '', 'token' => $token], 200);
+    // });
 });
 
 Route::prefix('ads')->group(function () {
@@ -454,7 +475,7 @@ Route::prefix('faq')->group(function () {
     });
 });
 
-Route::prefix('course')->group(function () {
+Route::prefix('courses')->group(function () {
     Route::get('/list',function (){
         $row = COURSE::getList();
         foreach ($row as &$value) {
@@ -526,6 +547,23 @@ Route::prefix('peter')->group(function () {
         if(!$token)
             return $response = response() -> json(['success' => False, 'message' => 'Invalid Token'], 403);
         $content = PETER::updateContent($input);
+        return response() -> json(['success' => True, 'message' => '', 'token' => $token], 200);
+    });
+});
+
+
+Route::prefix('course')->group(function () {
+    Route::get('/',function (){
+        $row = COURSE::get();
+        return response() -> json(['success' => True, 'message' => '','data' => $row], 200);
+    });
+
+    Route::post('/',function (){
+        $input = request() -> all();
+        $token = ADMIN::checkToken($input);
+        if(!$token)
+            return $response = response() -> json(['success' => False, 'message' => 'Invalid Token'], 403);
+        $content = COURSE::updateContent($input);
         return response() -> json(['success' => True, 'message' => '', 'token' => $token], 200);
     });
 });

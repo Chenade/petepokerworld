@@ -5,6 +5,7 @@ return array(
     'fnq' => '常見問題',
     'course_intro' => '課程介紹',
     'about_p' => '關於小P',
+    'n8_discount' => 'N8戰隊優惠', 
     'ads' => '廣告',
     'banner' => '橫幅',
     'management' => '管理',

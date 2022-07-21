@@ -43,9 +43,9 @@ Route::get('/admin/natural_8', function () {
 	return view('page.management.natural_8');
 });
 
-Route::get('/admin/faq', function () {
-	return view('page.management.faq');
-});
+// Route::get('/admin/faq', function () {
+// 	return view('page.management.faq');
+// });
 
 Route::get('/admin/course', function () {
 	return view('page.management.course');

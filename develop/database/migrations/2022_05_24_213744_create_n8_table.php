@@ -15,9 +15,9 @@ class CreateN8Table extends Migration
     {
         Schema::create('n8', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('category')->default(1);
             $table->string('title');
-            $table->string('link');
+            $table->json('content');
+            $table->string('link')->nullable();
             $table->string('image')->default('');
             $table->integer('ord')->default(1);
             $table->integer('del')->default(0);

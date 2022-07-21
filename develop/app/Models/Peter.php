@@ -27,7 +27,7 @@ class Peter extends Model
 
     public static function updateContent($input)
     {
-        $content = NEWS::find(1);
+        $content = Peter::find(1);
         if (!$content)
         {
             $content = new Peter;

@@ -57,6 +57,7 @@ class PostImage extends Model
         $row = DB::table('image') -> where('id',$id) -> first();
         if (!$row)
             return NULL;
+        unlink($_SERVER['DOCUMENT_ROOT']."\upload\Image\\".$row->uuid_name);
         DB::table('image')-> where('id', $id)-> update(['del' => 1]);
         return true;
     }

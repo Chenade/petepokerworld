@@ -40,6 +40,15 @@
                 <div class="modal-body">
                     <div class="col-12">
                         <div class="form-group">
+                            <label class="col-form-label">{{trans('dictionary.category')}}:</label>
+                            <select class="col-12 selectpicker nopadding" id="edit_category">
+                                <option value="1">活動資訊</option>
+                                <option value="2">小P部落格</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group">
                             <label class="col-form-label">{{trans('dictionary.title')}}:</label>
                             <input type="text" class="form-control" id="edit_title">
                         </div>
