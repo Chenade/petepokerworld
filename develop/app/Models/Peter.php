@@ -31,12 +31,12 @@ class Peter extends Model
         if (!$content)
         {
             $content = new Peter;
-            $content->content = $input['content'];
+            $content->content = stripslashes($input['content']);
             $content->save();
         }
         else{
             $content->timestamps = true;
-            if (array_key_exists('content', $input)) $content->content = ($input['content']);
+            if (array_key_exists('content', $input)) $content->content = stripslashes($input['content']);
             $content->save();
         }
         return true;

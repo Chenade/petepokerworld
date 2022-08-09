@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
+use Ramsey\Uuid\Uuid;
 
 class N8 extends Model
 {
@@ -72,5 +73,25 @@ class N8 extends Model
         if (array_key_exists('ord', $input)) $content->link = $input['ord'];
         $content->save();
         return true;
+    }
+
+    public static function uploadThumbnail($request, $id){
+        $row = DB::table('n8') -> where('id', $id) -> first();
+        if (!$row)
+            return NULL;
+        
+        $filename = NULL;
+        if($request->file('image')){
+            $file= $request->file('image');
+            $filename= Uuid::uuid4().'.'.$file->extension();
+            $file-> move(public_path('upload/Image'), $filename);
+        }
+        
+        if ($filename){
+            if ($row->image != '')
+                unlink($_SERVER['DOCUMENT_ROOT']."\upload\Image\\".$row->image);
+            DB::table('n8')-> where('id', $id)-> update(['image' => $filename]);
+        }
+        return $filename;
     }
 }

@@ -9,6 +9,20 @@ return array(
     'ads' => '廣告',
     'banner' => '橫幅',
     'management' => '管理',
+    'team' => '戰隊專區',
+    'teams_join' => '戰隊加入教學',
+    'teams_intro' => '戰隊福利介紹',
+    'teams_discount' => '戰隊優惠',
+    'p_community' => '小P社群',
+    'coach_course' => '教練課程',
+    'media' => '社群連結',
+
+    'event' => '活動資訊',
+    'p_blog' => '小P部落格',
+
+    'privacy' => '隱私權條款',
+    'terms' => '會員條款',
+    'contact' => '聯絡我們',
     
     'save' => '儲存',
     'delete' => '刪除',

@@ -3,7 +3,7 @@
 <html>
 <head>
     @include('includes.head')
-    <title>interWellness | 為你而思</title>
+    <title>小P的撲克世界 | Pete's Poker World</title>
     <link rel="icon" href="/img/logo.ico">
 </head>
 <body>
@@ -14,7 +14,8 @@
         <div class="border-bottom"></div>
     </div>
 
-    <div id="breadcrumb" class="breadcrumb-area bg-img" style="background-image: url(/img/index5.jpg);">
+    <!-- <div id="breadcrumb" class="breadcrumb-area bg-img"> -->
+    <div id="breadcrumb" class="breadcrumb-area bg-img" style="background-image: url(/img/{{$page_banner}});">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12">
@@ -39,8 +40,6 @@
 {{--<p>{{ session() -> all()  }}</p>--}}
 @include('includes.footer')
 <script>
-    new WOW().init();
-
     $('.language').on('click', function () {
         var val = $(this).attr('id');
         window.location.href = '/language/' + val;

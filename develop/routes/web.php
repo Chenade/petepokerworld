@@ -19,47 +19,24 @@ use Illuminate\Support\Facades\Route;
 // 	// return view('index');
 // });
 
-Route::get('/admin', function () {
-	return view('page.management.news');
+
+Route::prefix('admin')->group(function () {
+	Route::get('/login', 		function () { return view('page.login');});
+	Route::get('/', 			function () { return view('page.management.news');});
+	Route::get('/news', 		function () { return view('page.management.news');});
+	Route::get('/banner', 		function () { return view('page.management.banner');});
+	Route::get('/ads', 			function () { return view('page.management.ads');});
+	Route::get('/natural_8', 	function () { return view('page.management.natural_8');});
+	Route::get('/course', 		function () { return view('page.management.course');});
+	Route::get('/peter', 		function () { return view('page.management.peter');});
+	// Route::get('/faq', 		function () { return view('page.management.faq'); });
+	// Route::get('/logout', 	function () { return view('page.management.faq'); });
 });
 
-Route::get('/admin/login', function () {
-	return view('page.login');
-});
-
-Route::get('/admin/news', function () {
-	return view('page.management.news');
-});
-
-Route::get('/admin/banner', function () {
-	return view('page.management.banner');
-});
-
-Route::get('/admin/ads', function () {
-	return view('page.management.ads');
-});
-
-Route::get('/admin/natural_8', function () {
-	return view('page.management.natural_8');
-});
-
-// Route::get('/admin/faq', function () {
-// 	return view('page.management.faq');
-// });
-
-Route::get('/admin/course', function () {
-	return view('page.management.course');
-});
-
-Route::get('/admin/peter', function () {
-	return view('page.management.peter');
-});
-
-// Route::get('/admin/logout', function () {
-// 	return view('page.management.peter');
-// });
-
-
-// Route::any('{query}',function() { 
-// 	return redirect('/admin/login');
-// })->where('query', '.*');
+Route::get('/', 				function () { return view('page.index');});
+Route::get('/news', 			function () { return view('page.news');});
+Route::get('/about_p', 			function () { return view('page.about');});
+Route::get('/media', 			function () { return view('page.media');});
+Route::get('/teams/intro', 		function () { return view('page.teamIntro');});
+Route::get('/teams/join', 		function () { return view('page.teamJoin');});
+Route::get('/teams/discount', 	function () { return view('page.teamDiscount');});

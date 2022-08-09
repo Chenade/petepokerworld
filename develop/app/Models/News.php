@@ -17,9 +17,9 @@ class News extends Model
 
     protected $guarded = [];
 
-    protected $casts = [
-        'content' => 'array'
-    ];
+    // protected $casts = [
+    //     'content' => 'array'
+    // ];
 
     public static function store($request)
     {

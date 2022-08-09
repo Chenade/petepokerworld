@@ -181,7 +181,7 @@
 
 .single-room-slide {
     height: 700px;
-    background-color: #716c60;
+    background-color: #2f2f2d;
 }
 
 .room-thumbnail {
@@ -190,7 +190,7 @@
 }
 
 .room-content {
-    background-color: #716c60;
+    background-color: #2f2f2d;
     padding-left: 80px;
 }
 
@@ -232,12 +232,13 @@
 
     .single-room-slide {
         height: 850px;
-        background-color: #716c60;
+        background-color: #2f2f2d;
     }
 }
 
 .single-post-box{
     transition-duration: 500ms;
+    box-shadow: #2f2f2d 10 10;
 }
 
 .single-post-area:hover{

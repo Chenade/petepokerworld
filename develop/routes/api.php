@@ -147,9 +147,9 @@ Route::prefix('news')->group(function () {
     Route::get('/list',function (){
         $row = NEWS::getList();
         foreach ($row as &$value) {
-            $value->content = str_replace("'", '"', trim($value->content, "\\\""));
-            $value->content = json_decode($value->content, true);
-            $value->image = PostImage::getList(1, $value->id);
+            // $value->content = str_replace("'", '"', trim($value->content, "\\\""));
+            // $value->content = json_decode($value->content, true);
+            $value->images = PostImage::getList(1, $value->id);
         }
         return response() -> json(['success' => True, 'message' => '','data' => $row], 200);
     });
@@ -184,7 +184,7 @@ Route::prefix('news')->group(function () {
         if (count(array_intersect_key(array_flip($required), $input)) != count($required))
             return response() -> json(['success' => False, 'message' => 'Missing required column.'], 400);    
         $row = NEWS::store($input);
-        return response() -> json(['success' => True, 'message' => '', 'token' => ''], 200);
+        return response() -> json(['success' => True, 'message' => '', 'token' => $token], 200);
     });
     
     Route::put('/{id}',function ($id){
@@ -215,20 +215,10 @@ Route::prefix('news')->group(function () {
         
         $content = NEWS::uploadThumbnail($request, $id);
         // $filename = PostImage::store($request, $category, $id);
-        // if (!$filename)
-            // return response() -> json(['success' => False, 'message' => 'Image upload failed'], 400);
+        if (!$content)
+            return response() -> json(['success' => False, 'message' => 'Image upload failed'], 400);
         return response() -> json(['success' => True, 'message' => '', 'token' => $token], 200);
     });
-
-    // Route::post('/{id}/uploadThumbnail',function (Request $request, $id){
-    //     $token = ADMIN::validToken(request() -> token);
-    //     if(!$token)
-    //         return $response = response() -> json(['success' => False, 'message' => 'Invalid Token'], 403);
-    //     $content = NEWS::uploadThumbnail($request, $id);
-    //     if (!$content)
-    //         return response() -> json(['success' => False, 'message' => 'Thumbnail Upload failed.'], 400);
-    //     return response() -> json(['success' => True, 'message' => '', 'token' => $token], 200);
-    // });
 });
 
 Route::prefix('ads')->group(function () {
@@ -268,7 +258,7 @@ Route::prefix('ads')->group(function () {
         if (count(array_intersect_key(array_flip($required), $input)) != count($required))
             return response() -> json(['success' => False, 'message' => 'Missing required column.'], 400);    
         $row = ADS::store($input);
-        return response() -> json(['success' => True, 'message' => '', 'token' => ''], 200);
+        return response() -> json(['success' => True, 'message' => '', 'token' => $token], 200);
     });
     
     Route::put('/{id}',function ($id){
@@ -330,7 +320,7 @@ Route::prefix('banner')->group(function () {
         if (count(array_intersect_key(array_flip($required), $input)) != count($required))
             return response() -> json(['success' => False, 'message' => 'Missing required column.'], 400);    
         $row = BANNER::store($input);
-        return response() -> json(['success' => True, 'message' => '', 'token' => ''], 200);
+        return response() -> json(['success' => True, 'message' => '', 'token' => $token], 200);
     });
     
     Route::put('/{id}',function ($id){
@@ -359,7 +349,7 @@ Route::prefix('n8')->group(function () {
     Route::get('/list',function (){
         $row = N8::getList();
         foreach ($row as &$value) {
-            $value->image = PostImage::getList(3, $value->id);
+            $value->images = PostImage::getList(4, $value->id);
         }
         return response() -> json(['success' => True, 'message' => '','data' => $row], 200);
     });
@@ -390,7 +380,7 @@ Route::prefix('n8')->group(function () {
         if (count(array_intersect_key(array_flip($required), $input)) != count($required))
             return response() -> json(['success' => False, 'message' => 'Missing required column.'], 400);    
         $row = N8::store($input);
-        return response() -> json(['success' => True, 'message' => '', 'token' => ''], 200);
+        return response() -> json(['success' => True, 'message' => '', 'token' => $token], 200);
     });
     
     Route::put('/{id}',function ($id){
@@ -411,6 +401,18 @@ Route::prefix('n8')->group(function () {
         $row = N8::deleteById($id);
         if (!$row)
             return response() -> json(['success' => False, 'message' => 'Natural 8 not found.'], 200);
+        return response() -> json(['success' => True, 'message' => '', 'token' => $token], 200);
+    });
+
+    Route::post('/{id}/uploadThumbnail', function(Request $request, $id){
+        $token = ADMIN::validToken(request() -> token);
+        if(!$token)
+            return $response = response() -> json(['success' => False, 'message' => 'Invalid Token'], 403);
+        
+        $content = N8::uploadThumbnail($request, $id);
+        // $filename = PostImage::store($request, $category, $id);
+        if (!$content)
+            return response() -> json(['success' => False, 'message' => 'Image upload failed'], 400);
         return response() -> json(['success' => True, 'message' => '', 'token' => $token], 200);
     });
 });
@@ -450,7 +452,7 @@ Route::prefix('faq')->group(function () {
         if (count(array_intersect_key(array_flip($required), $input)) != count($required))
             return response() -> json(['success' => False, 'message' => 'Missing required column.'], 400);    
         $row = FAQ::store($input);
-        return response() -> json(['success' => True, 'message' => '', 'token' => ''], 200);
+        return response() -> json(['success' => True, 'message' => '', 'token' => $token], 200);
     });
     
     Route::put('/{id}',function ($id){
@@ -510,7 +512,7 @@ Route::prefix('courses')->group(function () {
         if (count(array_intersect_key(array_flip($required), $input)) != count($required))
             return response() -> json(['success' => False, 'message' => 'Missing required column.'], 400);    
         $row = COURSE::store($input);
-        return response() -> json(['success' => True, 'message' => '', 'token' => ''], 200);
+        return response() -> json(['success' => True, 'message' => '', 'token' => $token], 200);
     });
     
     Route::put('/{id}',function ($id){
@@ -538,6 +540,8 @@ Route::prefix('courses')->group(function () {
 Route::prefix('peter')->group(function () {
     Route::get('/',function (){
         $row = PETER::get();
+        $row->content = stripslashes($row->content);
+        $row->images = PostImage::getList(7, $row->id);
         return response() -> json(['success' => True, 'message' => '','data' => $row], 200);
     });
 
@@ -550,7 +554,6 @@ Route::prefix('peter')->group(function () {
         return response() -> json(['success' => True, 'message' => '', 'token' => $token], 200);
     });
 });
-
 
 Route::prefix('course')->group(function () {
     Route::get('/',function (){

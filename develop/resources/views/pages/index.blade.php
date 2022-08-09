@@ -1,5 +1,5 @@
 @include('includes.language')
-@extends('layouts.default', ['page_header' =>'About','page_parent' =>'Home','page_parent_path' =>'/','page_path' =>''])
+@extends('layouts.default', ['page_header' =>'About','page_parent' =>'Home','page_parent_path' =>'/','page_path' =>'', 'page_banner' =>'index5.jpg'])
 @section('content')
 
     <section id="welcome" class="section col-12 nopadding" style="height: 100%">
