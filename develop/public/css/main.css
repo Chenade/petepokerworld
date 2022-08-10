@@ -206,11 +206,15 @@ div::-webkit-scrollbar {
     /* max-width: 200px; */
     max-height: 300px;
     overflow: hidden;
+    /* padding: 0; */
 }
 
 .img-box img{
     width: 100%;
-    object-fit: contain;
+    /* max-width: 200px; */
+    max-height: 200px;
+    object-fit: cover;
+    padding: 0;
 }
 
 .index-news .text-box{

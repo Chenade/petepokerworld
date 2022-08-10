@@ -15,8 +15,8 @@
         </div>
 
         <div class="d-flex flex-wrap align-items-center ">
-            <div class="col-12 col-lg-9 col-sm-8" style="height: 640px; overflow-y: scroll; scrollbar-width: none;" id="news"></div>
-            <div class="col-12 col-lg-3 col-sm-4" style="background-color: green; height: 500px;" id="ads"></div>
+            <div class="col-12 col-lg-9 col-sm-8" style="height: 650px; overflow-y: scroll; scrollbar-width: none;" id="news"></div>
+            <div class="col-12 col-lg-3 col-sm-4 d-flex justify-content-center" style="height: 600px;" id="ads"></div>
         </div>
 
         <div style="margin-top:20px;"></div>

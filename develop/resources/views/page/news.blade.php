@@ -13,11 +13,11 @@
     </ul>
     <div class="tab-content">
         <div class="tab-pane active" id="Device_content">
-            <div class="d-flex flex-wrap" style="padding: 15px;" id="events">
+            <div class="d-flex flex-wrap justify-content-center" style="padding: 15px;" id="events">
             </div>
         </div>
         <div class="tab-pane fade" id="Status_content">
-            <div class="camSet_container" style="padding: 15px;" id="blog">
+            <div class="d-flex flex-wrap justify-content-center" style="padding: 15px;" id="blog">
             </div>
         </div>
     </div>
