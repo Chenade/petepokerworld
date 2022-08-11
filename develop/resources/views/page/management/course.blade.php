@@ -1,5 +1,5 @@
 {{--@include('includes.language')--}}
-@extends('layouts.manage', ['page_header' =>'課程介紹'])
+@extends('layouts.manage', ['page_header' =>'關於小P'])
 @section('content')
 
     <section id="manage_member">
@@ -7,7 +7,8 @@
             <div class="col-12">
                 <div class="form-group">
                     <label class="col-form-label">{{trans('dictionary.content')}}:</label>
-                    <textarea id="edit_content" name="edit_content" rows="20" cols="33"></textarea>
+                    <textarea name="htmleditor"></textarea>
+                    <!-- <textarea id="edit_content" name="edit_content" rows="20" cols="33"></textarea> -->
                 </div>
             </div>
             <div class="d-flex justify-content-center">
@@ -36,16 +37,9 @@
     <link rel="stylesheet" href="/lib/flatpickr/flatpickr.min.css">
     <script src="/lib/flatpickr/flatpickr.min.js"></script>
 
-    <!-- <link rel="stylesheet" href="css/leaflet.min.css"> -->
-    <!-- <link rel="stylesheet" href="css/leaflet.extra-markers.min.css"> -->
-    <!-- <link rel="stylesheet" href="css/proton/style.min.css"> -->
-    <!-- <link rel="stylesheet" href="css/jquery-ui.css" type="text/css"> -->
-
-
-    <!-- <link rel="stylesheet" href="css/plyr.min.css"> -->
-    <!-- <script src="/lib/hls.min.js"></script> -->
-
-
+    <script src="/lib/ckeditor/ckeditor.js"></script>
+    <script src="/lib/ckeditor/config.js"></script>
+    
     <script src="/lib/DataTables/datatables.min.js"></script>
     <!-- <script src="js/lib/jquery.fileDownload.min.js"></script> -->
     <script src="/js/lib/moment.min.js"></script>

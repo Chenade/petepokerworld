@@ -44,6 +44,17 @@ class News extends Model
                 -> get();
     }
 
+    public static function getindexList()
+    {
+        $time = time();
+        return DB::table('news')
+                -> where('del', 0)
+                -> where('start_at', '<=', $time)
+                -> where('end_at', '>=', $time)
+                -> orderBy('ord', 'DESC') 
+                -> get();
+    }
+
     public static function getByCategoryId($id)
     {
         if ($id > 2)
@@ -76,7 +87,7 @@ class News extends Model
         $content->timestamps = true;
         if (array_key_exists('category', $input)) $content->category = $input['category'];
         if (array_key_exists('title', $input)) $content->title = $input['title'];
-        if (array_key_exists('content', $input)) $content->content = ($input['content']);
+        if (array_key_exists('content', $input)) $content->content = '"' . ($input['content']) . '"';
         if (array_key_exists('link', $input)) $content->link = $input['link'];
         if (array_key_exists('link_alt', $input)) $content->link_alt = $input['link_alt'];
         if (array_key_exists('ord', $input)) $content->ord = $input['ord'];

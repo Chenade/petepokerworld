@@ -28,7 +28,7 @@
     <div class="col-auto">
         <div class="d-flex">
             <div class="w-100">
-                <button type="button" class="btn btn-primary" id="login" data-loading-text="<span class='spinner-grow spinner-grow-sm'></span>">{{trans('account.login')}}</button>
+                <button type="button" class="btn btn-primary" id="login" data-loading-text="<span class='spinner-grow spinner-grow-sm'></span>">{{trans('dictionary.login')}}</button>
             </div>
         </div>
     </div>

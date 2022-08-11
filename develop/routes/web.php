@@ -34,9 +34,12 @@ Route::prefix('admin')->group(function () {
 });
 
 Route::get('/', 				function () { return view('page.index');});
+Route::get('/new', 				function () { return view('page.new');});
 Route::get('/news', 			function () { return view('page.news');});
+Route::get('/privacy', 			function () { return view('page.privacy');});
 Route::get('/about_p', 			function () { return view('page.about');});
 Route::get('/media', 			function () { return view('page.media');});
+Route::get('/course', 			function () { return view('page.course');});
 Route::get('/teams/intro', 		function () { return view('page.teamIntro');});
 Route::get('/teams/join', 		function () { return view('page.teamJoin');});
 Route::get('/teams/discount', 	function () { return view('page.teamDiscount');});

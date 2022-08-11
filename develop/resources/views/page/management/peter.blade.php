@@ -37,15 +37,6 @@
     <link rel="stylesheet" href="/lib/flatpickr/flatpickr.min.css">
     <script src="/lib/flatpickr/flatpickr.min.js"></script>
 
-    <!-- <link rel="stylesheet" href="css/leaflet.min.css"> -->
-    <!-- <link rel="stylesheet" href="css/leaflet.extra-markers.min.css"> -->
-    <!-- <link rel="stylesheet" href="css/proton/style.min.css"> -->
-    <!-- <link rel="stylesheet" href="css/jquery-ui.css" type="text/css"> -->
-
-
-    <!-- <link rel="stylesheet" href="css/plyr.min.css"> -->
-    <!-- <script src="/lib/hls.min.js"></script> -->
-
     <script src="/lib/ckeditor/ckeditor.js"></script>
     <script src="/lib/ckeditor/config.js"></script>
     

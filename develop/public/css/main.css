@@ -221,7 +221,6 @@ div::-webkit-scrollbar {
    /* width: 100%; */
 }
 
-
 .text-box h3{
   margin: 0;
 }
@@ -230,9 +229,6 @@ div::-webkit-scrollbar {
     word-wrap: break-word;
     word-break: break-all;
 }
-
-
-
 
 .box {
     display: flex;
@@ -244,7 +240,6 @@ div::-webkit-scrollbar {
     height: 250px; 
     object-fit: fill;
 }
-
 
 .single-post-box{
     transition-duration: 500ms;
@@ -278,4 +273,28 @@ div::-webkit-scrollbar {
     color: #2A303B;
     margin: 0.5em 0;
     font-size: 1.2em;
+}
+
+.btn-pete{
+    display: inline-block;
+    font-weight: 500;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1rem;
+    border-radius: 0.25rem;
+    color: #1cc3b2;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.btn-pete:hover{
+    color:rgba(0, 0, 0, .6);
+    background-color: transparent;   
+}
+
+.btn-pete:focus { 
+    background-color: #1cc3b2; 
+    color: White; 
 }

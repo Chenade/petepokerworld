@@ -6,8 +6,7 @@
             </div>
             <div>
                 <a href="/privacy" target="_blank" style="color: #888888">{{trans('dictionary.privacy')}}</a>&emsp;
-                <a href="/terms" target="_blank" style="color: #888888">{{trans('dictionary.terms')}}</a>&emsp;
-                <a href="/contact" target="_blank" style="color: #888888">{{trans('dictionary.contact')}}</a>
+                <a href="/media" style="color: #888888">{{trans('dictionary.contact')}}</a>
             </div>
         </div>
     </div>

@@ -1,6 +1,7 @@
 <?php
 
 return array(
+    'login' => '登入',
     'news' => '最新消息',
     'fnq' => '常見問題',
     'course_intro' => '課程介紹',
@@ -13,6 +14,7 @@ return array(
     'teams_join' => '戰隊加入教學',
     'teams_intro' => '戰隊福利介紹',
     'teams_discount' => '戰隊優惠',
+    'p_area' => '小P專區',
     'p_community' => '小P社群',
     'coach_course' => '教練課程',
     'media' => '社群連結',
@@ -39,5 +41,6 @@ return array(
     'uploadImage' => '上傳圖片',
     
     'ord' => '排序',
+    'index_manage' => '首頁管理',
     // 'end_at' => '結束日期',
 );

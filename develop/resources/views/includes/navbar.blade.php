@@ -10,7 +10,7 @@
             </div>
             <div class="col-6 d-flex align-items-center top-header-content justify-content-end">
                 <!-- <a href="#"><i class="fas fa-phone-alt"></i> <span class="mobile-hide"> (+886)-4-2225-0948</span></a> -->
-                <a href="#"><i class="fas fa-envelope"></i> <span class="mobile-hide">petepokerworld@gmail.com</span></a>
+                <a href="mailto:petepokerworld@gmail.com" target="_blank"><i class="fas fa-envelope"></i> <span class="mobile-hide">petepokerworld@gmail.com</span></a>
             </div>
         </div>
     </div>
@@ -32,8 +32,9 @@
                     <li class="nav-item" style="margin: 0 1.5em;font-size:0.9em;"><a class="nav-link" href="/news">{{trans('dictionary.news')}}</a></li>
                     <li class="nav-item" style="margin: 0 1.5em;font-size:0.9em;"><a class="nav-link" href="/about_p">{{trans('dictionary.about_p')}}</a></li>
                     <li class="nav-item" style="margin: 0 1.5em;font-size:0.9em;"><a class="nav-link" href="/media">{{trans('dictionary.p_community')}}</a></li>
-                    <li class="nav-item dropdown" style="margin: 0 1.5em;font-size:0.9em;">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    <li class="nav-item" style="margin: 0 1.5em;font-size:0.9em;"><a class="nav-link" href="/course">{{trans('dictionary.course_intro')}}</a></li>
+                    <li class="nav-item dropdown" style="margin: 0 1.5em;font-size:0.9em; background-color: orange; ">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" style="color: white;">
                             {{trans('dictionary.team')}}
                         </a>
                         <ul class="dropdown-menu">
