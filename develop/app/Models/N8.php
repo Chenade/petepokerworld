@@ -68,7 +68,7 @@ class N8 extends Model
             return NULL;
         $content->timestamps = true;
         if (array_key_exists('title', $input)) $content->title = $input['title'];
-        if (array_key_exists('content', $input)) $content->title = $input['content'];
+        if (array_key_exists('content', $input)) $content->content = $input['content'];
         if (array_key_exists('link', $input)) $content->link = strlen($input['link']) ? $input['link'] : null;
         if (array_key_exists('ord', $input)) $content->link = $input['ord'];
         $content->save();

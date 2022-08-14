@@ -39,6 +39,7 @@ return array(
     'start_at' => '開始日期',
     'end_at' => '結束日期',
     'uploadImage' => '上傳圖片',
+    'uploadThumbnail' => '上傳縮圖',
     
     'ord' => '排序',
     'index_manage' => '首頁管理',
