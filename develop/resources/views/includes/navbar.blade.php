@@ -15,7 +15,7 @@
         </div>
     </div>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light mobile-hidden">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="/">
                 <div class=""><img src="/img/logo.png" style="margin-bottom: 0px; height: 30px;"/>
