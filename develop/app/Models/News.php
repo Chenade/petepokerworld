@@ -26,7 +26,7 @@ class News extends Model
         $content = new News;
         $content->category = $request['category'];
         $content->title = $request['title'];
-        $content->content = $request['content'];
+        $content->content = json_encode($request['content']);
         $content->start_at = $request['start_at'];
         $content->end_at = $request['end_at'];
         $content->ts = (array_key_exists('ts', $request)) ? $request['ts'] : time();
