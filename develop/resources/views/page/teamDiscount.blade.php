@@ -1,5 +1,5 @@
 @include('includes.language')
-@extends('layouts.default', ['page_header' =>trans('dictionary.teams_discount'),'page_parent' =>'Team','page_parent_path' =>'/','page_path' =>'', 'page_banner' =>'index5.jpg'])
+@extends('layouts.default', ['page_header' =>trans('dictionary.teams_discount'),'page_parent' =>'Team','page_parent_path' =>'/','page_path' =>'', 'page_banner' =>'sub_banner.png'])
 @section('content')
     <div class="container" style="margin-top:50px; min-height: 100vh;">
         <div class="d-flex flex-wrap" style="padding: 15px;" id="events"></div>

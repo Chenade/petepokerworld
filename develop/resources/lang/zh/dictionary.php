@@ -14,6 +14,7 @@ return array(
     'teams_join' => '戰隊加入教學',
     'teams_intro' => '戰隊福利介紹',
     'teams_discount' => '戰隊優惠',
+    'teams_line' => 'Line 教學群組',
     'p_area' => '小P專區',
     'p_community' => '小P社群',
     'coach_course' => '教練課程',

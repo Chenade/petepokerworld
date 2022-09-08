@@ -11,7 +11,7 @@ body{
 
 .top-header-area i{
     padding-right: 5px;
-    color: #1cc3b2;
+    color: #E7A60A;
 }
 
 .top-header-content  > a{
@@ -47,7 +47,7 @@ body{
 }
 
 .footer-area h4{
-    color: #1cc3b2;
+    color: #E7A60A;
     margin: 0.5em 0;
 }
 
@@ -96,7 +96,7 @@ body{
 }
 
 .tag{
-    color: #1cc3b2;
+    color: #E7A60A;
     font-weight: bold;
 }
 
@@ -118,7 +118,7 @@ body{
     padding: 0 40px;
     text-align: center;
     text-transform: capitalize;
-    background-color: #1cc3b2;
+    background-color: #E7A60A;
     color: #ffffff;
     border: none;
     border-radius: 2px;
@@ -136,9 +136,9 @@ body{
     padding: 0 30px;
     text-align: center;
     text-transform: capitalize;
-    color: #1cc3b2;
+    color: #E7A60A;
     background-color: #ffffff;
-    border: solid #1cc3b2 2px;
+    border: solid #E7A60A 2px;
     border-radius: 2px;
     transition-duration: 500ms;
 }
@@ -247,7 +247,7 @@ div::-webkit-scrollbar {
 }
 
 .single-post-area:hover{
-    color: #1cc3b2 !important;
+    color: #E7A60A !important;
     transform: scale(1.2);
 }
 
@@ -259,7 +259,7 @@ div::-webkit-scrollbar {
 }
 
 .post-catagory{
-    color: #1cc3b2;
+    color: #E7A60A;
     font-weight: bold;
 }
 
@@ -284,7 +284,7 @@ div::-webkit-scrollbar {
     font-size: 1rem;
     line-height: 1rem;
     border-radius: 0.25rem;
-    color: #1cc3b2;
+    color: #E7A60A;
     text-decoration: none;
     background-color: transparent;
 }
@@ -295,6 +295,6 @@ div::-webkit-scrollbar {
 }
 
 .btn-pete:focus { 
-    background-color: #1cc3b2; 
+    background-color: #E7A60A; 
     color: White; 
 }

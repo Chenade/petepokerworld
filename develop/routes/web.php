@@ -29,6 +29,7 @@ Route::prefix('admin')->group(function () {
 	Route::get('/natural_8', 	function () { return view('page.management.natural_8');});
 	Route::get('/course', 		function () { return view('page.management.course');});
 	Route::get('/peter', 		function () { return view('page.management.peter');});
+	Route::get('/media', 		function () { return view('page.management.media');});
 	// Route::get('/faq', 		function () { return view('page.management.faq'); });
 	// Route::get('/logout', 	function () { return view('page.management.faq'); });
 });

@@ -1,5 +1,5 @@
 @include('includes.language')
-@extends('layouts.default', ['page_header' =>trans('dictionary.coach_course'),'page_parent' =>'Course','page_parent_path' =>'/','page_path' =>'', 'page_banner' =>'index5.jpg'])
+@extends('layouts.default', ['page_header' =>trans('dictionary.coach_course'),'page_parent' =>'Course','page_parent_path' =>'/','page_path' =>'', 'page_banner' =>'sub_banner.png'])
 @section('content')
     <div class="container" style="margin-top:0px; min-height: 100vh;">
         <div class="" style="padding: 15px; margin-top: 2em;" id="events">

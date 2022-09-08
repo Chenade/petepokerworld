@@ -10,7 +10,8 @@ use App\Models\Ads;  //3
 use App\Models\N8;  //4
 use App\Models\FAQ;  //5
 use App\Models\COURSE;  //6
-use App\Models\Peter;  //6
+use App\Models\Peter;  //7
+use App\Models\Media;  //8
 use App\Models\Activity;
 use App\Models\PostImage;
 use App\Models\Admin;
@@ -43,6 +44,8 @@ function get_category($type){
         $content = 6;
     else if ($type == "peter")
         $content = 7;
+    else if ($type == "media")
+        $content = 8;
     return $content;
 }
 
@@ -60,6 +63,8 @@ function get_content($type, $id){
         $content = COURSE::get();
     else if ($type == "peter")
         $content = PETER::get();
+    else if ($type == "media")
+        $content = MEDIA::get();
     return $content;
 }
 
@@ -579,6 +584,7 @@ Route::prefix('course')->group(function () {
         $row->content = str_replace('\n', '$?', $row->content);
         $row->content = stripslashes($row->content);
         $row->content = str_replace('$?', '', $row->content);
+        $row->images = PostImage::getList(4, $value->id);
         return response() -> json(['success' => True, 'message' => '','data' => $row], 200);
     });
 
@@ -588,6 +594,91 @@ Route::prefix('course')->group(function () {
         if(!$token)
             return $response = response() -> json(['success' => False, 'message' => 'Invalid Token'], 403);
         $content = COURSE::updateContent($input);
+        return response() -> json(['success' => True, 'message' => '', 'token' => $token], 200);
+    });
+});
+
+Route::prefix('media')->group(function () {
+    Route::get('/index',function (){
+        $row = MEDIA::getindexList();
+        foreach ($row as &$value) {
+            // $value->content = str_replace("'", '"', trim($value->content, "\\\""));
+            // $value->content = json_decode($value->content, true);
+            // $value->images = PostImage::getList(8, $value->id);
+        }
+        return response() -> json(['success' => True, 'message' => '','data' => $row], 200);
+    });
+        
+    Route::get('/list',function (){
+        $row = MEDIA::getList();
+        foreach ($row as &$value) {
+            // $value->content = str_replace("'", '"', trim($value->content, "\\\""));
+            // $value->content = json_decode($value->content, true);
+            // $value->images = PostImage::getList(1, $value->id);
+        }
+        return response() -> json(['success' => True, 'message' => '','data' => $row], 200);
+    });
+
+    Route::get('/adminlist',function (){
+        $row = MEDIA::getList();
+        foreach ($row as &$value) {
+            // $value->content = str_replace("'", '"', trim($value->content, "\\\""));
+            // $value->content = json_decode($value->content, true);
+            $value->type = '<span class="type-convert">' . $value->type . '</span>';
+            $value->operate = '<button type="button" class="btn btn-info edit-btn" style="margin:0" data-id="'.$value->id.'"><i class="far fa-solid fa-gears"></i></button>';
+            $value->operate .= '<button type="button" class="btn btn-danger delete-btn" style="margin:0" data-id="'.$value->id.'"><i class="far fa-solid fa-trash-can"></i></button>';
+        }
+        return response() -> json(['success' => True, 'message' => '','data' => $row], 200);
+    });
+
+    Route::get('/{id}',function ($id){
+        $content = MEDIA::getElementById($id);
+        if (!$content)
+            return response() -> json(['success' => False, 'message' => 'News not found.'], 404);
+        $content[0]->images = PostImage::getList(1, $id);
+        return response() -> json(['success' => True, 'message' => '', 'data' => $content[0]], 200);
+    });
+    
+    Route::post('/create',function (){
+        $input = request() -> all();
+        $token = ADMIN::checkToken($input);
+        if(!$token)
+            return $response = response() -> json(['success' => False, 'message' => 'Invalid Token'], 403);
+        $required = array('type', 'link', 'content');
+        if (count(array_intersect_key(array_flip($required), $input)) != count($required))
+            return response() -> json(['success' => False, 'message' => 'Missing required column.'], 400);    
+        $row = MEDIA::store($input);
+        return response() -> json(['success' => True, 'message' => '', 'token' => $token], 200);
+    });
+    
+    Route::put('/{id}',function ($id){
+        $input = request() -> all();
+        $token = ADMIN::checkToken($input);
+        if(!$token)
+            return $response = response() -> json(['success' => False, 'message' => 'Invalid Token'], 403);
+        $content = MEDIA::updateById($id, $input);
+        if (!$content)
+            return response() -> json(['success' => False, 'message' => 'Media not found.'], 404);
+        return response() -> json(['success' => True, 'message' => '', 'token' => $token], 200);
+    });
+    
+    Route::delete('/{id}/{token}',function ($id, $token){
+        $token = ADMIN::validToken($token);
+        if(!$token)
+            return $response = response() -> json(['success' => False, 'message' => 'Invalid Token'], 403);
+        $row = MEDIA::deleteById($id);
+        if (!$row)
+            return response() -> json(['success' => False, 'message' => 'News not found.'], 200);
+        return response() -> json(['success' => True, 'message' => '', 'token' => $token], 200);
+    });
+
+    Route::post('/{id}/uploadThumbnail', function(Request $request, $id){
+        $token = ADMIN::validToken(request() -> token);
+        if(!$token)
+            return $response = response() -> json(['success' => False, 'message' => 'Invalid Token'], 403);
+        $content = MEDIA::uploadThumbnail($request, $id);
+        if (!$content)
+            return response() -> json(['success' => False, 'message' => 'Image upload failed'], 400);
         return response() -> json(['success' => True, 'message' => '', 'token' => $token], 200);
     });
 });

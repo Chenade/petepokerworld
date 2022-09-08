@@ -10,7 +10,7 @@
             </div>
             <div class="col-6 d-flex align-items-center top-header-content justify-content-end">
                 <!-- <a href="#"><i class="fas fa-phone-alt"></i> <span class="mobile-hide"> (+886)-4-2225-0948</span></a> -->
-                <a href="mailto:petepokerworld@gmail.com" target="_blank"><i class="fas fa-envelope"></i> <span class="mobile-hide">petepokerworld@gmail.com</span></a>
+                <a href="mailto:support@petepoker.com" target="_blank"><i class="fas fa-envelope"></i> <span class="mobile-hide">support@petepoker.com</span></a>
             </div>
         </div>
     </div>
@@ -38,9 +38,10 @@
                             {{trans('dictionary.team')}}
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/teams/intro"><i class="fas fa-users"></i> {{trans('dictionary.teams_intro')}}</a></li>
-                            <li><a class="dropdown-item" href="/teams/join"><i class="fas fa-tachometer-alt"></i> {{trans('dictionary.teams_join')}}</a></li>
-                            <li><a class="dropdown-item" href="/teams/discount"><i class="fas fa-users"></i> {{trans('dictionary.teams_discount')}}</a></li>
+                            <li><a class="dropdown-item" href="/teams/intro">{{trans('dictionary.teams_intro')}}</a></li>
+                            <li><a class="dropdown-item" href="/teams/join">{{trans('dictionary.teams_join')}}</a></li>
+                            <li><a class="dropdown-item" href="/teams/discount">{{trans('dictionary.teams_discount')}}</a></li>
+                            <!-- <li><a class="dropdown-item" href="/teams/discount">{{trans('dictionary.teams_line')}}</a></li> -->
                         </ul>
                     </li>
                 </ul>

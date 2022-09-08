@@ -1,5 +1,5 @@
 @include('includes.language')
-@extends('layouts.default', ['page_header' =>'小P社群','page_parent' =>'Media','page_parent_path' =>'/','page_path' =>'', 'page_banner' =>'index5.jpg'])
+@extends('layouts.default', ['page_header' =>'小P社群','page_parent' =>'Media','page_parent_path' =>'/','page_path' =>'', 'page_banner' =>'sub_banner.png'])
 @section('content')
     <div class="container" style="margin-top:50px; min-height: 100vh;">
         <!-- body -->
