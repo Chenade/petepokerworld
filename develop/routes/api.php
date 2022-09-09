@@ -561,10 +561,13 @@ Route::prefix('courses')->group(function () {
 Route::prefix('peter')->group(function () {
     Route::get('/',function (){
         $row = PETER::get();
-        $row->content = str_replace('\n', '$?', $row->content);
-        $row->content = stripslashes($row->content);
-        $row->content = str_replace('$?', '', $row->content);
-        $row->images = PostImage::getList(7, $row->id);
+        if($row)
+        {
+            $row->content = str_replace('\n', '$?', $row->content);
+            $row->content = stripslashes($row->content);
+            $row->content = str_replace('$?', '', $row->content);
+            $row->images = PostImage::getList(7, $row->id);
+        }
         return response() -> json(['success' => True, 'message' => '','data' => $row], 200);
     });
 
@@ -581,10 +584,13 @@ Route::prefix('peter')->group(function () {
 Route::prefix('course')->group(function () {
     Route::get('/',function (){
         $row = COURSE::get();
-        $row->content = str_replace('\n', '$?', $row->content);
-        $row->content = stripslashes($row->content);
-        $row->content = str_replace('$?', '', $row->content);
-        $row->images = PostImage::getList(4, $row->id);
+        if ($row)
+        {
+            $row->content = str_replace('\n', '$?', $row->content);
+            $row->content = stripslashes($row->content);
+            $row->content = str_replace('$?', '', $row->content);
+            $row->images = PostImage::getList(4, $row->id);
+        }
         return response() -> json(['success' => True, 'message' => '','data' => $row], 200);
     });
 
