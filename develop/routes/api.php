@@ -9,7 +9,7 @@ use App\Models\Banner;  //2
 use App\Models\Ads;  //3
 use App\Models\N8;  //4
 use App\Models\FAQ;  //5
-use App\Models\COURSE;  //6
+use App\Models\Course;  //6
 use App\Models\Peter;  //7
 use App\Models\Media;  //8
 use App\Models\Activity;
@@ -584,7 +584,7 @@ Route::prefix('course')->group(function () {
         $row->content = str_replace('\n', '$?', $row->content);
         $row->content = stripslashes($row->content);
         $row->content = str_replace('$?', '', $row->content);
-        $row->images = PostImage::getList(4, $value->id);
+        $row->images = PostImage::getList(4, $row->id);
         return response() -> json(['success' => True, 'message' => '','data' => $row], 200);
     });
 
