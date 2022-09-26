@@ -30,41 +30,8 @@
         </div>
     </div>
     
-    <div class="d-flex flex-wrap" style="margin-bottom: 100px;">
-            <div class="col-10 col-sm-6 col-lg-3">
-                <div class='box'>
-                    <img class="content" style="border-radius: 50%;" src="https://images.fonearena.com/blog/wp-content/uploads/2013/11/Lenovo-p780-camera-sample-10.jpg" alt="your_keyword"/>
-                </div> 
-                <div class="col-12 d-flex justify-content-center" style="margin-top: 15px;">
-                    <button class="btn btn-info">Facebook</button>
-                </div>
-            </div>
-            <div class="col-10 col-sm-6 col-lg-3">
-                <div class='box'>
-                    <img class="content" style="border-radius: 50%;" src="https://images.fonearena.com/blog/wp-content/uploads/2013/11/Lenovo-p780-camera-sample-10.jpg" alt="your_keyword"/>
-                </div> 
-                <div class="col-12 d-flex justify-content-center" style="margin-top: 15px;">
-                    <button class="btn btn-info">Facebook</button>
-                </div>
-            </div>
-            <div class="col-10 col-sm-6 col-lg-3">
-                <div class='box'>
-                    <img class="content" style="border-radius: 50%;" src="https://images.fonearena.com/blog/wp-content/uploads/2013/11/Lenovo-p780-camera-sample-10.jpg" alt="your_keyword"/>
-                </div> 
-                <div class="col-12 d-flex justify-content-center" style="margin-top: 15px;">
-                    <button class="btn btn-info">Facebook</button>
-                </div>
-            </div>
-            <div class="col-10 col-sm-6 col-lg-3">
-                <div class='box'>
-                    <img class="content" style="border-radius: 50%;" src="https://images.fonearena.com/blog/wp-content/uploads/2013/11/Lenovo-p780-camera-sample-10.jpg" alt="your_keyword"/>
-                </div> 
-                <div class="col-12 d-flex justify-content-center" style="margin-top: 15px;">
-                    <button class="btn btn-info">Facebook</button>
-                </div>
-            </div>
-             
-        </div>
+    <div class="d-flex flex-wrap justify-content-center" style="margin-bottom: 100px;" id="mediaBox">
+    </div>
 @stop
 @section('end_script')
     <script src="js/general.min.js?v={{Config::get('app.version')}}"></script>

@@ -617,11 +617,11 @@ Route::prefix('media')->group(function () {
         
     Route::get('/list',function (){
         $row = MEDIA::getList();
-        foreach ($row as &$value) {
+        // foreach ($row as &$value) {
             // $value->content = str_replace("'", '"', trim($value->content, "\\\""));
             // $value->content = json_decode($value->content, true);
             // $value->images = PostImage::getList(1, $value->id);
-        }
+        // }
         return response() -> json(['success' => True, 'message' => '','data' => $row], 200);
     });
 
