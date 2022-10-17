@@ -89,7 +89,7 @@ class N8 extends Model
         
         if ($filename){
             if ($row->image != '')
-                unlink($_SERVER['DOCUMENT_ROOT']."\upload\Image\\".$row->image);
+                unlink($_SERVER['DOCUMENT_ROOT']."/upload/Image/".$row->image);
             DB::table('n8')-> where('id', $id)-> update(['image' => $filename]);
         }
         return $filename;

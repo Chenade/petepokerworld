@@ -112,7 +112,7 @@ class News extends Model
         
         if ($filename){
             if ($row->image != '')
-                unlink($_SERVER['DOCUMENT_ROOT']."\upload\Image\\".$row->image);
+                unlink($_SERVER['DOCUMENT_ROOT']."/upload/Image/".$row->image);
             DB::table('news')-> where('id', $id)-> update(['image' => $filename]);
         }
 
