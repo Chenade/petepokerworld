@@ -35,6 +35,11 @@
 
             <h5>在 Natural 8 裡，你可以遊玩非常多種類型的撲克遊戲，低額到高額買入通通都有，註冊好及儲值完後依自己的喜好及能力去遊玩自己喜愛的遊戲，預祝各位遊戲都有很棒的遊戲體驗。</h5>
 
+            <div class="col-12 d-flex justify-content-center">
+                <div>
+                    <button class="btn-peter btn-lg">立即加入小Ｐ戰隊</button>
+                </div>
+            </div>
         </div>
     </div>
 

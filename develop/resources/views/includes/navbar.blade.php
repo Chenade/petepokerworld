@@ -19,7 +19,7 @@
         <div class="container">
             <a class="navbar-brand" href="/">
                 <div class=""><img src="/img/logo.png" style="margin-bottom: 0px; height: 30px;"/>
-                    <b>Petepokerworld</b>
+                    <b>小Ｐ的撲克世界</b>
                 </div>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,7 +40,7 @@
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="/teams/intro">{{trans('dictionary.teams_intro')}}</a></li>
                             <li><a class="dropdown-item" href="/teams/join">{{trans('dictionary.teams_join')}}</a></li>
-                            <li><a class="dropdown-item" href="/teams/discount">{{trans('dictionary.teams_discount')}}</a></li>
+                            <li><a class="dropdown-item" href="/teams/discount">{{trans('dictionary.line_group')}}</a></li>
                             <!-- <li><a class="dropdown-item" href="/teams/discount">{{trans('dictionary.teams_line')}}</a></li> -->
                         </ul>
                     </li>

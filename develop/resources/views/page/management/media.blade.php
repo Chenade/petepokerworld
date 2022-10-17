@@ -44,6 +44,8 @@
                                 <option value="4">Discord</option>
                                 <option value="5">Line教學群</option>
                                 <option value="6">Line Open chat</option>
+                                <option value="7">Youtube</option>
+                                <option value="8">Twitch</option>
                             </select>
                         </div>
                     </div>
