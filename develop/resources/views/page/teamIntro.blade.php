@@ -31,6 +31,7 @@
                 </div>
             </div>
 
+            <br>
             <div class="d-flex justify-content-center" style="background-color:#E7A60A">
                 <h4>還有各種不定期 Natural8 大賽期間的專屬加碼活動，最優惠的福利只留給小P戰隊成員！</h4>
             </div>

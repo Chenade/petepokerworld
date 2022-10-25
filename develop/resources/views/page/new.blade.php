@@ -18,7 +18,7 @@
         
         <div class="" style="padding: 15px; " id="events">
             <div>
-                <p style="text-align: justify; line-height: 2em; font-size: 1.2em;" id="des"></p>
+                <p style="text-align: justify; line-height: 2em; font-size: 1.2em; word-break: break-all; word-wrap: break-word;" id="des"></p>
             </div>
         </div>
 

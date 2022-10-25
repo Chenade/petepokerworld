@@ -197,6 +197,8 @@
 .service-detail{
     letter-spacing: 2px;
     font-size: 0.9em;
+    word-break: break-all;
+    word-wrap: break-word;
 }
 
 .fnq-box{

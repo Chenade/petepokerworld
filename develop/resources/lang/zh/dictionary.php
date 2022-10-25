@@ -20,6 +20,7 @@ return array(
     'p_community' => '小P社群',
     'coach_course' => '教練課程',
     'media' => '社群連結',
+    'type' => '選項',
 
     'event' => '活動資訊',
     'p_blog' => '小P部落格',
