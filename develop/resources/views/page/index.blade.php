@@ -25,7 +25,7 @@
 
     <div class="col-12" style="margin-top: 100px;">
         <div class="section-heading text-center">
-            <h6 class="tag">Media </h6>
+            <h6 class="tag">Social Media </h6>
             <h2>{{trans('dictionary.media')}}</h2>
         </div>
     </div>

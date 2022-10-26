@@ -299,6 +299,7 @@
         letter-spacing: 2px;
         font-size: 1.6em;
         text-align: center;
+        min-height: 200px;
     }
     
     

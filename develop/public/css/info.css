@@ -199,6 +199,7 @@
     font-size: 0.9em;
     word-break: break-all;
     word-wrap: break-word;
+    min-height: 130px;
 }
 
 .fnq-box{
