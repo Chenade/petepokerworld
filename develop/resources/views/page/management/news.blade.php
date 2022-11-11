@@ -94,7 +94,7 @@
                                 <input type="number" class="form-control" id="edit_ord" min="1" max="99" value="1">
                             </div>
                             <hr>
-                            <div class="form-group">
+                            <div class="form-group image-box">
                                 <label class="col-form-label">{{trans('dictionary.uploadThumbnail')}}:</label>
                                 <input type="file" id="file-t" name='file-t'>
                                 <input type="hidden" id="file-tcount" value='0'>

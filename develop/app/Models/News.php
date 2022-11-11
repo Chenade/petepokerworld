@@ -34,6 +34,7 @@ class News extends Model
         if (array_key_exists('link_alt', $request)) $content->link_alt = strlen($request['link_alt']) ? $request['link_alt'] : null;
         if (array_key_exists('ord', $request)) $content->ord = $request['ord'];
         $content->save();
+        return $content->id;
     }
 
     public static function getList()

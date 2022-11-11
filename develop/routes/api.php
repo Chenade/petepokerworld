@@ -205,7 +205,7 @@ Route::prefix('news')->group(function () {
         if (count(array_intersect_key(array_flip($required), $input)) != count($required))
             return response() -> json(['success' => False, 'message' => 'Missing required column.'], 400);    
         $row = NEWS::store($input);
-        return response() -> json(['success' => True, 'message' => '', 'token' => $token], 200);
+        return response() -> json(['success' => True, 'message' => $row, 'token' => $token], 200);
     });
     
     Route::put('/{id}',function ($id){
