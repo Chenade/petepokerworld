@@ -202,6 +202,8 @@
     word-break: break-all;
     word-wrap: break-word;
     min-height: 130px;
+    max-height: 188px;
+    overflow: hidden;
 }
 
 .fnq-box{
